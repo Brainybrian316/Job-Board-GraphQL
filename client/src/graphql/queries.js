@@ -14,8 +14,8 @@ export async function getJobs() {
   }
 }
   `;
-  const data = await request(GRAPH_URL, query);
-  console.log('data', data);
+  const { jobs } = await request(GRAPH_URL, query);
+  return jobs
 
 
 }
