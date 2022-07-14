@@ -11,6 +11,10 @@ export const resolvers = {
     jobs: () => Job.findAll(), // db from jobs.json
   },
 
+  Company: {
+    jobs: (company) => Job.findAll((job) => job.companyId === company.id),
+  },
+
   // we search schema.graphql Job type for the fields we want to add
   Job: {
     // we want to add a company field to the Job type so we pass job as the first argument to the function
