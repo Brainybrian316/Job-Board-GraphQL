@@ -1,6 +1,8 @@
 
 #  Query is a get request to the API
 type Query {
+  # we reference Job with the argument $id to get a specific job
+    job(id: ID!): Job
   # we reference the type Job for its fields
     jobs: [Job!]
 }
