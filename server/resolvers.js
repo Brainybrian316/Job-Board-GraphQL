@@ -2,6 +2,8 @@ import { Company, Job } from './db.js';
 
 export const resolvers = {
   Query: {
+    //  we can use '_' to ignore or leave an argument out
+    company: (_, { id}) => Company.findById(id),
     /* we only want one job from the job schema in graphql. we pass 'id' as an args instead of args since it contains the id and we only want the id */
     job: (_root, { id }) => Job.findById(id),
 

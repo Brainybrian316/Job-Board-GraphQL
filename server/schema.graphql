@@ -1,6 +1,8 @@
 
 #  Query is a get request to the API
 type Query {
+
+  company(id: ID!): Company
   # we reference Job with the argument $id to get a specific job
     job(id: ID!): Job
   # we reference the type Job for its fields
@@ -13,6 +15,8 @@ type Company {
   id: ID!
   # the name of the company
   name: String!
+  # the description of the company
+  description: String
 }
 
 # The type that we will use to create our jobs
