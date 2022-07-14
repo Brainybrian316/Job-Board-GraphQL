@@ -1,15 +1,26 @@
+
+#  Query is a get request to the API
 type Query {
+  # we reference the type Job for its fields
     jobs: [Job!]
 }
 
+# the type that will be returned by the query
 type Company {
+  # the id of the company
   id: ID!
+  # the name of the company
   name: String!
 }
 
+# The type that we will use to create our jobs
 type Job {
+  # The ID of the job (eg. "1") mandatory due to !
     id: ID!
+    # The title of the job (e.g. "Software Engineer")
     title: String!
+    # references the type Company query above
     company: Company!
+    # The description of the job (e.g. "A software engineer")
     description: String
 }
