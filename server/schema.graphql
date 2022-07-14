@@ -17,6 +17,7 @@ type Company {
   name: String!
   # the description of the company
   description: String
+  # we reference the type Job for its fields
   jobs: [Job!]
 }
 
