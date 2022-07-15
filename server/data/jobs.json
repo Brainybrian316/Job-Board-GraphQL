@@ -40,5 +40,11 @@
     "title": "auth job",
     "companyId": "pVbRRBQtMVw6lUAkj1k43",
     "description": "this requires authentication"
+  },
+  {
+    "id": "9MjsOxqfcU906akOnyDa3",
+    "title": "QA test",
+    "description": "somone to test bugs",
+    "companyId": "wvdB54Gqbdp_NZTXK9Tue"
   }
 ]
