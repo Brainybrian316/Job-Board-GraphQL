@@ -18,15 +18,21 @@
     "description": "We are looking for a Full-Stack Developer familiar with Node.js, Express, and React."
   },
   {
-    "id": "kRZVjpttsyG73VavYT1R9",
-    "title": "Job 1",
+    "id": "CA9l0O1djxwDEyYzuSQzD",
+    "title": "Junior engineer",
     "companyId": "pVbRRBQtMVw6lUAkj1k43",
-    "description": "test"
+    "description": "entry level position"
   },
   {
-    "id": "CA9l0O1djxwDEyYzuSQzD",
-    "title": "Job 2",
+    "id": "lB5WBpQGUzUbhcQ7uuK4T",
+    "title": "Senior DevOps Engineer",
     "companyId": "pVbRRBQtMVw6lUAkj1k43",
-    "description": "Test"
+    "description": "We need a new devops"
+  },
+  {
+    "id": "FXm4rq0QwZ7W1O4dJo5iW",
+    "title": "DevOps Engineer",
+    "companyId": "pVbRRBQtMVw6lUAkj1k43",
+    "description": "We need somebody to restart the servers when they fall over"
   }
 ]
