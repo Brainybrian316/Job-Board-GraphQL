@@ -1,5 +1,6 @@
 import { Company, Job } from './db.js';
 
+
 export const resolvers = {
   Query: {
     //  we can use '_' to ignore or leave an argument out
@@ -12,7 +13,12 @@ export const resolvers = {
   },
 
   Mutation: {
-    createJob: (_root, { input} ) => Job.create(input),
+    createJob: (_root, { input}, { auth } ) => {
+      if (!auth) {
+        throw new Error('invalid credentials');
+      }
+       return Job.create(input);
+      },
     deleteJob: (_root, { id }) => Job.delete(id),
     updateJob: (_root, { input }) => Job.update(input),
   },

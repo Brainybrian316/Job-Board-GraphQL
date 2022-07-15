@@ -34,5 +34,11 @@
     "title": "DevOps Engineer",
     "companyId": "pVbRRBQtMVw6lUAkj1k43",
     "description": "We need somebody to restart the servers when they fall over"
+  },
+  {
+    "id": "kpoX6HKTMaZbPU4Pa3jXq",
+    "title": "auth job",
+    "companyId": "pVbRRBQtMVw6lUAkj1k43",
+    "description": "this requires authentication"
   }
 ]
