@@ -46,5 +46,23 @@
     "title": "QA test",
     "description": "somone to test bugs",
     "companyId": "wvdB54Gqbdp_NZTXK9Tue"
+  },
+  {
+    "id": "sFapHDs1LHoyNSE1oSeRu",
+    "title": "Product Owner",
+    "description": "give the engineers work to do",
+    "companyId": "wvdB54Gqbdp_NZTXK9Tue"
+  },
+  {
+    "id": "UOOmLMXAcIkmeigpL7-Gf",
+    "title": "Product Owner assistant",
+    "description": "Assist the product owner",
+    "companyId": "wvdB54Gqbdp_NZTXK9Tue"
+  },
+  {
+    "id": "5_eC_v2ZENk2-eQT6MeFo",
+    "title": "Engineer",
+    "description": "code for us",
+    "companyId": "wvdB54Gqbdp_NZTXK9Tue"
   }
 ]

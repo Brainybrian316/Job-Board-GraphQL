@@ -8,11 +8,10 @@ const client = new ApolloClient({
   uri: GRAPH_URL,
   cache: new InMemoryCache(),
 
-})
+});
 
-const JOB_QUERY = gql`
-query JobQuery($id: ID!) {
-  job(id: $id) {
+const JOB_DETAIL_FRAGMENT = gql`
+fragment JobDetail on Job {
     id
     title
     company {
@@ -21,28 +20,31 @@ query JobQuery($id: ID!) {
     }
     description
   }
+`;
+
+const JOB_QUERY = gql`
+query JobQuery($id: ID!) {
+  job(id: $id) {
+    ...JobDetail
+  }
 }
+${JOB_DETAIL_FRAGMENT}
 `;
 
 export async function createJob(input) {
   const mutation = gql`
   mutation CreateJobMutation($input: CreateJobInput!) {
   job: createJob(input: $input) {
-    id
-    title 
-    company {
-      id 
-      name 
-    }
-    description
+    ...JobDetail
   }
 }
+${JOB_DETAIL_FRAGMENT}
   `;
   const variables = { input };
   const clientContext = {
-    headers: { Authorization: `Bearer ${getAccessToken() }` }, };
+    headers: { 'Authorization': `Bearer ${getAccessToken() }` }, };
     const { data: { job } } = await client.mutate({ 
-      mutation, variables, clientContext,
+      mutation, variables, context: clientContext,
       update: (cache, { data: { job } }) => {
       cache.writeQuery({
         query: JOB_QUERY,
