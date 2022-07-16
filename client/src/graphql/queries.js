@@ -1,4 +1,4 @@
-import { request } from 'graphql-request';
+
 import { ApolloClient, gql, InMemoryCache } from '@apollo/client';
 import { getAccessToken } from '../auth';
 
